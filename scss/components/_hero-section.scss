@@ -1,4 +1,4 @@
-@use '../utils/variables' as *;
+@use "../utils/variables" as *;
 
 .hero-section {
   position: relative;
@@ -9,7 +9,7 @@
   justify-content: center;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -37,8 +37,9 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
-    transform: translateZ(0);
+    z-index: 0;
+    transform: none;
+    height: 100dvh;
 
     @media (max-width: $br-desktop) {
       transform: scale(1.4);
@@ -51,7 +52,7 @@
     text-align: center;
     line-height: 1;
     font-weight: 400;
-    font-family: 'Michroma', sans-serif;
+    font-family: "Michroma", sans-serif;
     letter-spacing: 4px;
     text-transform: uppercase;
 
@@ -68,7 +69,7 @@
     font-size: 13px;
     line-height: 1.5;
     font-weight: 300;
-    font-family: 'Michroma', sans-serif;
+    font-family: "Michroma", sans-serif;
     letter-spacing: 6px;
     text-transform: uppercase;
     text-align: center;

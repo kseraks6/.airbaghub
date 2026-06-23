@@ -6,3 +6,4 @@ window.addEventListener("load", () => {
     }, 200);
   });
 });
+document.querySelector("video").muted;
