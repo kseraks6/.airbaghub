@@ -1,0 +1,90 @@
+@use '../utils/variables' as *;
+
+.media-section {
+  background-color: var(--color-primary-dark);
+
+  &__title {
+    margin: 0 auto 48px;
+    padding-top: 48px;
+    text-align: center;
+    color: var(--color-primary-light);
+    @media screen and (max-width: $br-tablet) {
+      padding-top: 100px;
+    }
+  }
+
+  &__links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding-bottom: 80px;
+
+    @media screen and (min-width: $br-desktop) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    background-color: rgba(250, 244, 234, 0.06);
+    border: 1px solid rgba(250, 244, 234, 0.1);
+    border-radius: 12px;
+    padding: 36px 24px;
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      transform 0.3s ease;
+
+    &:hover {
+      background-color: var(--color-brand-normal);
+      border-color: var(--color-brand-normal);
+      transform: scale(1.06);
+
+      .media-section__icon {
+        fill: var(--color-primary-light);
+        color: var(--color-primary-light);
+      }
+
+      .media-section__name,
+      .media-section__handle {
+        color: var(--color-primary-light);
+      }
+    }
+  }
+
+  &__icon {
+    display: block;
+    fill: var(--color-primary-light);
+    color: var(--color-primary-light);
+    width: 48px;
+    height: 48px;
+    transition:
+      fill 0.3s ease,
+      color 0.3s ease;
+    opacity: 0.85;
+  }
+
+  &__name {
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-primary-light);
+    transition: color 0.3s ease;
+  }
+
+  &__handle {
+    font-size: 11px;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-brand-light);
+    opacity: 0.7;
+    transition: color 0.3s ease;
+  }
+}

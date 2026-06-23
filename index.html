@@ -1,0 +1,408 @@
+﻿<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AirbagHub — Premium Interior Renovation</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Style (CSS)-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="scss/main.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__container">
+          <nav class="header__nav">
+            <ul class="header__menu">
+              <li>
+                <a class="link" href="#Works_section">Работы</a>
+              </li>
+            </ul>
+            <a class="header__logo" href="/">
+              <img src="../images/logo.png" alt="AirbagHub" />
+            </a>
+            <ul class="header__menu">
+              <li>
+                <a class="link" href="#Media_section">Соцсети</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="header__burger menu-btn-open" type="button">
+            <svg width="24" height="24">
+              <use href="../images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-menu">
+        <button class="mobile-menu__btn-close menu-btn-close" type="button">
+          <svg class="mobile-menu__cancel_buton" width="24" height="24">
+            <use href="../images/icons.svg#cancel_buton"></use>
+          </svg>
+        </button>
+        <ul class="mobile-menu__list">
+          <li>
+            <a class="mobile-menu__link" href="#Works_section">Работы</a>
+          </li>
+          <li>
+            <a class="mobile-menu__link" href="#Media_section">Соцсети</a>
+          </li>
+        </ul>
+        <div class="mobile-menu__lang">
+          <span class="mobile-menu__lang-link mobile-menu__lang-link--active"
+            >RU</span
+          >
+          <a
+            class="mobile-menu__lang-link"
+            href="./.en/index.html"
+            hreflang="en"
+            >EN</a
+          >
+          <a
+            class="mobile-menu__lang-link"
+            href="./.ua/index.html"
+            hreflang="uk"
+            >UA</a
+          >
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero-section">
+        <div class="container">
+          <h1 class="hero-section__title">
+            <span class="text-brand">AIRBAG</span>HUB
+          </h1>
+          <p class="hero-section__promo">Premium interior renovation</p>
+        </div>
+        <video class="hero-section__video" autoplay muted playsinline loop>
+          <source src="../images/hero_background.mp4" type="video/mp4" />
+        </video>
+      </section>
+      <section class="works-section section" id="Works_section">
+        <div class="container">
+          <div class="works-section__container">
+            <div class="works-section__content" data-animate="fade-left">
+              <h2 class="works-section__title section__title">Лучшие работы</h2>
+              <p class="works-section__text">
+                <span class="text-brand text-bald text-uppercase"
+                  >Добро пожаловать в нашу инстаграмм страницу</span
+                >
+              </p>
+              <p class="works-section__text">
+                Перетяжка сидений, руля, потолка и других элементов интерьера.
+                Мы работаем с качественными материалами, аккуратно и в
+                оговорённые сроки. Вы получаете салон, который выглядит как
+                новый.
+              </p>
+            </div>
+            <div class="works-section__links" id="grid">
+              <div
+                id="works-section__item1"
+                class="works-section__card"
+                data-animate="fade-up"
+                data-delay="0"
+              >
+                <img
+                  class="works-section__image"
+                  src="../images/BMW_5_series.avif"
+                  alt="BMW_5_series"
+                />
+                <div class="works-section__card-body">
+                  <h4 class="works-section__card-title">BMW 5 Series</h4>
+                  <p class="works-section__card-subtitle">
+                    Полная перетяжка салона
+                  </p>
+                  <p class="works-section__card-text">
+                    Заменили изношенную кожу на новую, восстановили форму
+                    сидений и швы. Салон выглядит как у нового автомобиля.
+                  </p>
+                </div>
+              </div>
+              <div
+                id="works-section__item2"
+                class="works-section__card"
+                data-animate="fade-up"
+                data-delay="100"
+              >
+                <img
+                  class="works-section__image"
+                  src="../images/Audi_A6.jpg"
+                  alt="Audi_A6"
+                />
+                <div class="works-section__card-body">
+                  <h4 class="works-section__card-title">Audi A6</h4>
+                  <p class="works-section__card-subtitle">Реставрация руля</p>
+                  <p class="works-section__card-text">
+                    Убрали потертости, обновили кожу и строчки. Руль снова
+                    приятный на ощупь и выглядит как новый.
+                  </p>
+                </div>
+              </div>
+              <div
+                id="works-section__item3"
+                class="works-section__card"
+                data-animate="fade-up"
+                data-delay="200"
+              >
+                <img
+                  class="works-section__image"
+                  src="../images/Mercedes-Benz-E-class.avif"
+                  alt="Mercedes-Benz"
+                />
+                <div class="works-section__card-body">
+                  <h4 class="works-section__card-title">
+                    Mercedes-Benz E-Class
+                  </h4>
+                  <p class="works-section__card-subtitle">Перетяжка потолка</p>
+                  <p class="works-section__card-text">
+                    Заменили провисшую ткань на новую, выполнена аккуратная
+                    натяжка без складок. Салон стал более чистым и аккуратным.
+                  </p>
+                </div>
+              </div>
+              <div
+                id="works-section__item4"
+                class="works-section__card"
+                data-animate="fade-up"
+                data-delay="300"
+              >
+                <img
+                  class="works-section__image"
+                  src="../images/porshe_911.avif"
+                  alt="porshe_911.avif"
+                />
+                <div class="works-section__card-body">
+                  <h4 class="works-section__card-title">Porsche 911</h4>
+                  <p class="works-section__card-subtitle">
+                    Восстановление салона
+                  </p>
+                  <p class="works-section__card-text">
+                    Обновили сиденья и декоративные элементы, сохранив стиль
+                    автомобиля. Результат — премиальный вид без потери
+                    оригинальности.
+                  </p>
+                </div>
+              </div>
+              <div
+                id="works-section__item5"
+                class="works-section__card"
+                data-animate="fade-up"
+                data-delay="400"
+              >
+                <img
+                  class="works-section__image"
+                  src="../images/Range_Rover.jpg"
+                  alt="Range_Rover"
+                />
+                <div class="works-section__card-body">
+                  <h4 class="works-section__card-title">Range Rover</h4>
+                  <p class="works-section__card-subtitle">
+                    Ремонт кожаного салона
+                  </p>
+                  <p class="works-section__card-text">
+                    Устранили трещины, восстановили цвет и текстуру кожи. Салон
+                    вернул свой дорогой внешний вид.
+                  </p>
+                </div>
+              </div>
+              <div
+                id="works-section__item6"
+                class="works-section__card"
+                data-animate="fade-up"
+                data-delay="500"
+              >
+                <img
+                  class="works-section__image"
+                  src="../images/Lexus.jpg"
+                  alt="Lexus"
+                />
+                <div class="works-section__card-body">
+                  <h4 class="works-section__card-title">Lexus RX</h4>
+                  <p class="works-section__card-subtitle">
+                    Перетяжка элементов интерьера
+                  </p>
+                  <p class="works-section__card-text">
+                    Обновили подлокотник, вставки и части сидений. Всё выполнено
+                    в едином стиле с заводским дизайном.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="media-section section" id="Media_section">
+        <div class="container">
+          <h2
+            class="media-section__title section__title section__title--centered"
+            data-animate="fade-up"
+          >
+            Свяжитесь с нами <br />
+            удобным способом
+          </h2>
+          <div class="media-section__links">
+            <a
+              href="https://www.instagram.com/_airbaghub_?igsh=MW5pY2p5aTNnYjQ2Yw%3D%3D&utm_source=qr"
+              class="media-section__card"
+              data-animate="scale"
+              data-delay="0"
+            >
+              <svg class="media-section__icon" width="32" height="32">
+                <use href="../images/icons.svg#icon-instagram"></use>
+              </svg>
+              <span class="media-section__name">Instagram</span>
+              <span class="media-section__handle">@airbaghub</span>
+            </a>
+            <a
+              href="https://t.me/AIRBAGHUB"
+              class="media-section__card"
+              data-animate="scale"
+              data-delay="100"
+            >
+              <svg class="media-section__icon" width="32" height="32">
+                <use href="../images/icons.svg#icon-telegram"></use>
+              </svg>
+              <span class="media-section__name">Telegram</span>
+              <span class="media-section__handle">@AIRBAGHUB</span>
+            </a>
+            <a
+              href="https://www.tiktok.com/@airbag.srs4?_r=1&_t=ZN-97QWsPEaUEQ"
+              class="media-section__card"
+              data-animate="scale"
+              data-delay="200"
+            >
+              <svg class="media-section__icon" width="32" height="32">
+                <use href="../images/icons.svg#icon-tiktok"></use>
+              </svg>
+              <span class="media-section__name">TikTok</span>
+              <span class="media-section__handle">@airbaghub</span>
+            </a>
+            <a
+              href="https://wa.me/34601606193"
+              class="media-section__card"
+              data-animate="scale"
+              data-delay="300"
+            >
+              <svg class="media-section__icon" width="32" height="32">
+                <use href="../images/icons.svg#icon-whatsapp"></use>
+              </svg>
+              <span class="media-section__name">WhatsApp</span>
+              <span class="media-section__handle">Заказать консультацию</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__container">
+          <div class="footer__logo-big" data-animate="fade-up">
+            <span class="text-brand">AIRBAG</span>HUB
+          </div>
+          <nav class="footer__nav">
+            <ul class="footer__col">
+              <li>
+                <a class="footer__link" href="#Media_section">Соцсети</a>
+              </li>
+            </ul>
+            <ul class="footer__col">
+              <li>
+                <a class="footer__link" href="#Works_section">Работы</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="footer__social">
+            <li>
+              <a
+                href="https://www.instagram.com/_airbaghub_?igsh=MW5pY2p5aTNnYjQ2Yw%3D%3D&utm_source=qr"
+              >
+                <svg class="footer__social-icon" width="28" height="28">
+                  <use href="../images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://t.me/AIRBAGHUB">
+                <svg class="footer__social-icon" width="28" height="28">
+                  <use href="../images/icons.svg#icon-telegram"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.tiktok.com/@airbag.srs4?_r=1&_t=ZN-97QWsPEaUEQ"
+              >
+                <svg class="footer__social-icon" width="28" height="28">
+                  <use href="../images/icons.svg#icon-tiktok"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/34601606193">
+                <svg class="footer__social-icon" width="28" height="28">
+                  <use href="../images/icons.svg#icon-whatsapp"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <p class="footer__copyright">© 2026 AirbagHub. Все права защищены.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="lang-switcher" id="langSwitcher">
+      <button
+        class="lang-switcher__toggle"
+        id="langToggle"
+        type="button"
+        aria-haspopup="listbox"
+        aria-expanded="false"
+      >
+        <span class="lang-switcher__current">RU</span>
+        <svg
+          class="lang-switcher__chevron"
+          width="10"
+          height="6"
+          viewBox="0 0 10 6"
+        >
+          <path
+            d="M1 1L5 5L9 1"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <ul class="lang-switcher__dropdown" id="langDropdown" role="listbox">
+        <li class="lang-switcher__item">
+          <a class="lang-switcher__option" href="./.en/index.html" hreflang="en"
+            >EN</a
+          >
+        </li>
+        <li class="lang-switcher__item">
+          <a class="lang-switcher__option" href="./.ua/index.html" hreflang="uk"
+            >UA</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <script src="../js/mobile-menu.js" defer></script>
+    <script src="../js/header.js" defer></script>
+    <script src="../js/scroll-animate.js" defer></script>
+    <script src="../js/lang-switcher.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  </body>
+</html>

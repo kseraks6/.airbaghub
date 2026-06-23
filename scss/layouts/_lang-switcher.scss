@@ -1,0 +1,105 @@
+@use '../utils/variables' as *;
+
+.lang-switcher {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 30;
+
+  @media screen and (max-width: ($br-desktop - 1)) {
+    display: none;
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 16px;
+    background-color: rgba(5, 5, 5, 0.82);
+    border: 1px solid rgba(250, 244, 234, 0.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: var(--color-primary-light);
+    font-family: 'Michroma', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:
+      border-color 0.3s ease,
+      background-color 0.3s ease;
+
+    &:hover {
+      border-color: rgba(250, 244, 234, 0.45);
+      background-color: rgba(5, 5, 5, 0.96);
+    }
+
+    &[aria-expanded='true'] {
+      border-color: var(--color-brand-normal);
+
+      .lang-switcher__chevron {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__current {
+    line-height: 1;
+  }
+
+  &__chevron {
+    flex-shrink: 0;
+    stroke: currentColor;
+    fill: none;
+    transition: transform 0.3s ease;
+  }
+
+  &__dropdown {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    right: 0;
+    min-width: 100%;
+    background-color: rgba(5, 5, 5, 0.96);
+    border: 1px solid rgba(250, 244, 234, 0.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      visibility 0.25s;
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(250, 244, 234, 0.08);
+    }
+  }
+
+  &__option {
+    display: block;
+    padding: 11px 16px;
+    font-family: 'Michroma', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--color-brand-light);
+    text-decoration: none;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+
+    &:hover {
+      color: var(--color-brand-dark);
+      background-color: rgba(250, 244, 234, 0.04);
+    }
+  }
+}

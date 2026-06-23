@@ -1,0 +1,14 @@
+.link {
+  color: var(--color-primary-light);
+  text-decoration: none;
+  transition: 0.3s;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.link:hover {
+  color: var(--color-brand-dark);
+}

@@ -1,0 +1,87 @@
+@use '../utils/variables' as *;
+
+.header {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 100%;
+  z-index: 10;
+  transition:
+    background-color 0.3s,
+    box-shadow 0.3s,
+    backdrop-filter 0.3s;
+
+  &--sticky {
+    position: fixed;
+    background-color: rgba(5, 5, 5, 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  &__logo {
+    flex-shrink: 0;
+
+    img {
+      height: 36px;
+      width: auto;
+
+      @media screen and (min-width: $br-desktop) {
+        height: 48px;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+
+    @media screen and (max-width: ($br-desktop - 1)) {
+      justify-content: center;
+
+      .header__menu {
+        display: none;
+      }
+    }
+  }
+
+  &__button {
+    @media screen and (max-width: ($br-desktop - 1)) {
+      display: none;
+    }
+  }
+
+  &__burger {
+    display: block;
+    background-color: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    cursor: pointer;
+    color: var(--color-primary-light);
+    top: 16px;
+    right: 16px;
+    position: absolute;
+
+    @media screen and (min-width: $br-desktop) {
+      display: none;
+    }
+  }
+}
