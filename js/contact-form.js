@@ -6,9 +6,15 @@ if (contactForm instanceof HTMLFormElement) {
 
     const status = document.querySelector('#contactFormStatus');
 
-    if (status) {
+    if (status instanceof HTMLElement) {
+      const messages = {
+        en: 'We are not accepting new repair requests right now. Your message has not been sent.',
+        uk: 'Наразі ми не приймаємо нові заявки на ремонт. Повідомлення не надіслано.',
+        ru: 'Новые заявки на ремонт сейчас не принимаются. Сообщение не отправлено.',
+      };
+
       status.textContent =
-        'Новые заявки на ремонт сейчас не принимаются. Форма не отправлена.';
+        messages[document.documentElement.lang] ?? messages.ru;
     }
   });
 }

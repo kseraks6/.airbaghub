@@ -1,18 +1,19 @@
+<!doctype html>
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AirbagHub — Premium Interior Renovation</title>
-
-    <!-- Google Fonts -->
+    <meta
+      name="description"
+      content="AirbagHub — відновлення автомобільного салону в Торрев'єсі."
+    />
+    <title>AirbagHub — Преміальне відновлення салону</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Style (CSS)-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
@@ -23,51 +24,49 @@
     <header class="header">
       <div class="container">
         <div class="header__container">
-          <nav class="header__nav">
+          <nav class="header__nav" aria-label="Головна навігація">
             <ul class="header__menu">
-              <!-- <li>
-                <a class="link" href="#Works_section">Роботи</a>
-              </li> -->
-              <a style="color: gray">Роботи</a>
+              <li><a class="link" href="#Works_section">Наші роботи</a></li>
+              <li><a class="link" href="#Services_section">Послуги</a></li>
             </ul>
-            <a class="header__logo" href="/">
+            <a class="header__logo" href="../index.html" aria-label="AirbagHub — головна">
               <img src="../images/logo.png" alt="AirbagHub" />
             </a>
             <ul class="header__menu">
-              <li>
-                <a class="link" href="#Media_section">Соцмережі</a>
-              </li>
+              <li><a class="link" href="#Media_section">Контакти</a></li>
             </ul>
           </nav>
-          <button class="header__burger menu-btn-open" type="button">
+          <button
+            class="header__burger menu-btn-open"
+            type="button"
+            aria-label="Відкрити меню"
+          >
             <svg width="24" height="24">
-              <use href="/images/icons.svg#icon-menu"></use>
+              <use href="../images/icons.svg#icon-menu"></use>
             </svg>
           </button>
         </div>
       </div>
       <div class="mobile-menu">
-        <button class="mobile-menu__btn-close menu-btn-close" type="button">
+        <button
+          class="mobile-menu__btn-close menu-btn-close"
+          type="button"
+          aria-label="Закрити меню"
+        >
           <svg class="mobile-menu__cancel_buton" width="24" height="24">
-            <use href="/images/icons.svg#cancel_buton"></use>
+            <use href="../images/icons.svg#cancel_buton"></use>
           </svg>
         </button>
         <ul class="mobile-menu__list">
-          <!-- <li>
-            <a class="mobile-menu__link" href="#Works_section">Роботи</a>
-          </li> -->
-          <li>
-            <a class="mobile-menu__link" href="#Media_section">Соцмережі</a>
-          </li>
+          <li><a class="mobile-menu__link" href="#Works_section">Наші роботи</a></li>
+          <li><a class="mobile-menu__link" href="#Services_section">Послуги</a></li>
+          <li><a class="mobile-menu__link" href="#Media_section">Контакти</a></li>
         </ul>
         <div class="mobile-menu__lang">
           <a class="mobile-menu__lang-link" href="../index.html" hreflang="ru"
             >RU</a
           >
-          <a
-            class="mobile-menu__lang-link"
-            href="../.en/index.html"
-            hreflang="en"
+          <a class="mobile-menu__lang-link" href="../.en/index.html" hreflang="en"
             >EN</a
           >
           <span class="mobile-menu__lang-link mobile-menu__lang-link--active"
@@ -76,13 +75,14 @@
         </div>
       </div>
     </header>
+
     <main>
       <section class="hero-section">
         <div class="container">
           <h1 class="hero-section__title">
             <span class="text-brand">AIRBAG</span>HUB
           </h1>
-          <p class="hero-section__promo">Premium interior renovation</p>
+          <p class="hero-section__promo">Преміальне відновлення салону</p>
         </div>
         <video
           class="hero-section__video"
@@ -90,247 +90,339 @@
           muted
           playsinline
           loop
-          poster="images/hero_poster.png"
+          poster="../images/hero_poster.png"
         >
           <source src="../images/hero_background.mp4" type="video/mp4" />
         </video>
       </section>
-      <!-- <section class="works-section section" id="Works_section">
+
+      <section
+        class="works-section section"
+        id="Works_section"
+        aria-labelledby="worksTitle"
+      >
         <div class="container">
-          <div class="works-section__container">
-            <div class="works-section__content" data-animate="fade-left">
-              <h2 class="works-section__title section__title">
-                Найкращі роботи
-              </h2>
-              <p class="works-section__text">
-                <span class="text-brand text-bald text-uppercase"
-                  >Ласкаво просимо до нашої інстаграм сторінки</span
-                >
-              </p>
-              <p class="works-section__text">
-                Перетяжка сидінь, керма, стелі та інших елементів інтер’єру. Ми
-                працюємо з якісними матеріалами, акуратно та в обумовлені
-                строки. Ви отримуєте салон, який виглядає як новий.
-              </p>
-            </div>
-            <div class="works-section__links" id="grid">
-              <div
-                id="works-section__item1"
-                class="works-section__card"
-                data-animate="fade-up"
-                data-delay="0"
-              >
-                <img
-                  class="works-section__image"
-                  src="../images/BMW_5_series.avif"
-                  alt="BMW_5_series"
-                />
-                <div class="works-section__card-body">
-                  <h4 class="works-section__card-title">BMW 5 Series</h4>
-                  <p class="works-section__card-subtitle">
-                    Повна перетяжка салону
-                  </p>
-                  <p class="works-section__card-text">
-                    Замінили зношену шкіру на нову, відновили форму сидінь та
-                    шви. Салон виглядає як у нового авто.
-                  </p>
-                </div>
-              </div>
-              <div
-                id="works-section__item2"
-                class="works-section__card"
-                data-animate="fade-up"
-                data-delay="100"
-              >
-                <img
-                  class="works-section__image"
-                  src="../images/Audi_A6.jpg"
-                  alt="Audi_A6"
-                />
-                <div class="works-section__card-body">
-                  <h4 class="works-section__card-title">Audi A6</h4>
-                  <p class="works-section__card-subtitle">Реставрація керма</p>
-                  <p class="works-section__card-text">
-                    Прибрали потертості, оновили шкіру та прошивку. Кермо знову
-                    приємне на дотик і виглядає як нове.
-                  </p>
-                </div>
-              </div>
-              <div
-                id="works-section__item3"
-                class="works-section__card"
-                data-animate="fade-up"
-                data-delay="200"
-              >
-                <img
-                  class="works-section__image"
-                  src="../images/Mercedes-Benz-E-class.avif"
-                  alt="Mercedes-Benz"
-                />
-                <div class="works-section__card-body">
-                  <h4 class="works-section__card-title">
-                    Mercedes-Benz E-Class
-                  </h4>
-                  <p class="works-section__card-subtitle">Перетяжка стелі</p>
-                  <p class="works-section__card-text">
-                    Замінено обвислу тканину на нову, акуратна натяжка без
-                    складок. Салон став чистішим і охайнішим.
-                  </p>
-                </div>
-              </div>
-              <div
-                id="works-section__item4"
-                class="works-section__card"
-                data-animate="fade-up"
-                data-delay="300"
-              >
-                <img
-                  class="works-section__image"
-                  src="../images/porshe_911.avif"
-                  alt="porshe_911.avif"
-                />
-                <div class="works-section__card-body">
-                  <h4 class="works-section__card-title">Porsche 911</h4>
-                  <p class="works-section__card-subtitle">Відновлення салону</p>
-                  <p class="works-section__card-text">
-                    Оновили сидіння та декоративні елементи, зберігши стиль
-                    авто. Результат — преміальний вигляд без втрати
-                    оригінальності.
-                  </p>
-                </div>
-              </div>
-              <div
-                id="works-section__item5"
-                class="works-section__card"
-                data-animate="fade-up"
-                data-delay="400"
-              >
-                <img
-                  class="works-section__image"
-                  src="../images/Range_Rover.jpg"
-                  alt="Range_Rover"
-                />
-                <div class="works-section__card-body">
-                  <h4 class="works-section__card-title">Range Rover</h4>
-                  <p class="works-section__card-subtitle">
-                    Ремонт шкіряного салону
-                  </p>
-                  <p class="works-section__card-text">
-                    Усунули тріщини, відновили колір та текстуру шкіри. Салон
-                    повернув свій дорогий вигляд.
-                  </p>
-                </div>
-              </div>
-              <div
-                id="works-section__item6"
-                class="works-section__card"
-                data-animate="fade-up"
-                data-delay="500"
-              >
-                <img
-                  class="works-section__image"
-                  src="../images/Lexus.jpg"
-                  alt="Lexus"
-                />
-                <div class="works-section__card-body">
-                  <h4 class="works-section__card-title">Lexus RX</h4>
-                  <p class="works-section__card-subtitle">
-                    Перетяжка елементів інтер’єру
-                  </p>
-                  <p class="works-section__card-text">
-                    Оновили підлокітник, вставки та частини сидінь. Все виконано
-                    в одному стилі з заводським дизайном.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div class="works-section__intro" data-animate="fade-up">
+            <h2 class="works-section__title section__title" id="worksTitle">
+              Наші роботи
+            </h2>
+            <p class="works-section__description">
+              Побачте різницю. Перетягніть повзунок, щоб порівняти салон до та
+              після відновлення.
+            </p>
           </div>
-        </div>
-      </section> -->
-      <section class="media-section section" id="Media_section">
-        <div class="container">
-          <h2
-            class="media-section__title section__title section__title--centered"
-            data-animate="fade-up"
-          >
-            Зв'яжіться з нами <br />
-            зручним способом
-          </h2>
-          <div class="media-section__links">
-            <a
-              href="https://www.instagram.com/_airbaghub_?igsh=MW5pY2p5aTNnYjQ2Yw%3D%3D&utm_source=qr"
-              class="media-section__card"
-              data-animate="scale"
-              data-delay="0"
+          <article class="works-section__project" data-animate="fade-up">
+            <div
+              class="works-section__comparison"
+              style="--comparison-position: 50%"
             >
-              <svg class="media-section__icon" width="32" height="32">
-                <use href="../images/icons.svg#icon-instagram"></use>
-              </svg>
-              <span class="media-section__name">Instagram</span>
-              <span class="media-section__handle">@airbaghub</span>
-            </a>
-            <a
-              href="https://t.me/AIRBAGHUB"
-              class="media-section__card"
-              data-animate="scale"
+              <img
+                class="works-section__photo"
+                src="../images/after.png"
+                alt="Салон автомобіля після відновлення"
+              />
+              <img
+                class="works-section__photo works-section__photo--before"
+                src="../images/before.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <span class="works-section__label works-section__label--before"
+                >До</span
+              >
+              <span class="works-section__label works-section__label--after"
+                >Після</span
+              >
+              <span class="works-section__divider" aria-hidden="true"></span>
+              <input
+                class="works-section__slider"
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                aria-label="Порівняти салон автомобіля до та після відновлення"
+              />
+            </div>
+            <div class="works-section__project-info">
+              <div>
+                <p class="works-section__project-kicker">Обраний проєкт</p>
+                <h3 class="works-section__project-title">
+                  Відновлення салону
+                </h3>
+              </div>
+              <p class="works-section__project-description">
+                Очищення та відновлення салону автомобіля
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="services-section section"
+        id="Services_section"
+        aria-labelledby="servicesTitle"
+      >
+        <div class="container">
+          <div class="services-section__heading" data-animate="fade-up">
+            <h2 class="services-section__title" id="servicesTitle">
+              Увага до кожної деталі
+            </h2>
+            <p class="services-section__description">
+              Відновлюємо інтер'єр, зберігаючи комфорт і характер вашого
+              автомобіля.
+            </p>
+          </div>
+          <ul class="services-section__list">
+            <li class="services-section__item" data-animate="fade-up">
+              <span class="services-section__number">01</span>
+              <div>
+                <h3 class="services-section__name">Салон</h3>
+                <p class="services-section__details">
+                  Ремонт, відновлення та перетяжка сидінь і елементів інтер'єру.
+                </p>
+              </div>
+            </li>
+            <li
+              class="services-section__item"
+              data-animate="fade-up"
               data-delay="100"
             >
-              <svg class="media-section__icon" width="32" height="32">
-                <use href="../images/icons.svg#icon-telegram"></use>
-              </svg>
-              <span class="media-section__name">Telegram</span>
-              <span class="media-section__handle">@AIRBAGHUB</span>
-            </a>
-            <a
-              href="https://www.tiktok.com/@airbag.srs4?_r=1&_t=ZN-97QWsPEaUEQ"
-              class="media-section__card"
-              data-animate="scale"
+              <span class="services-section__number">02</span>
+              <div>
+                <h3 class="services-section__name">Подушки безпеки</h3>
+                <p class="services-section__details">
+                  Відновлення обшивки керма та елементів після спрацювання
+                  подушок безпеки.
+                </p>
+              </div>
+            </li>
+            <li
+              class="services-section__item"
+              data-animate="fade-up"
               data-delay="200"
             >
-              <svg class="media-section__icon" width="32" height="32">
-                <use href="../images/icons.svg#icon-tiktok"></use>
-              </svg>
-              <span class="media-section__name">TikTok</span>
-              <span class="media-section__handle">@airbaghub</span>
-            </a>
-            <a
-              href="https://wa.me/34601606193"
-              class="media-section__card"
-              data-animate="scale"
+              <span class="services-section__number">03</span>
+              <div>
+                <h3 class="services-section__name">Кермо</h3>
+                <p class="services-section__details">
+                  Перетяжка шкірою, оновлення покриття та акуратне прошивання.
+                </p>
+              </div>
+            </li>
+            <li
+              class="services-section__item"
+              data-animate="fade-up"
               data-delay="300"
             >
-              <svg class="media-section__icon" width="32" height="32">
-                <use href="../images/icons.svg#icon-whatsapp"></use>
-              </svg>
-              <span class="media-section__name">WhatsApp</span>
-              <span class="media-section__handle">Замовити консультацію</span>
-            </a>
+              <span class="services-section__number">04</span>
+              <div>
+                <h3 class="services-section__name">Стеля та оздоблення</h3>
+                <p class="services-section__details">
+                  Заміна тканини, що провисла, та оновлення декоративних
+                  елементів.
+                </p>
+              </div>
+            </li>
+            <li
+              class="services-section__item"
+              data-animate="fade-up"
+              data-delay="400"
+            >
+              <span class="services-section__number">05</span>
+              <div>
+                <h3 class="services-section__name">Шкіряні елементи</h3>
+                <p class="services-section__details">
+                  Відновлення кольору та поверхні шкіри на сидіннях і деталях
+                  салону.
+                </p>
+              </div>
+            </li>
+            <li
+              class="services-section__item"
+              data-animate="fade-up"
+              data-delay="500"
+            >
+              <span class="services-section__number">06</span>
+              <div>
+                <h3 class="services-section__name">
+                  Дверні карти та підлокітники
+                </h3>
+                <p class="services-section__details">
+                  Перетяжка та відновлення оббивки дверей і підлокітників.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="media-section section" id="Media_section">
+        <div class="container">
+          <div class="media-section__layout">
+            <div class="media-section__intro" data-animate="fade-left">
+              <h2 class="media-section__title section__title">Напишіть нам</h2>
+              <p class="media-section__description">
+                Розкажіть, що сталося з автомобілем. Ми ознайомимося з вашим
+                повідомленням і відповімо, щойно знову почнемо приймати заявки.
+              </p>
+            </div>
+            <form
+              class="media-section__form"
+              id="contactForm"
+              data-animate="fade-right"
+              aria-describedby="contactFormStatus"
+            >
+              <div class="media-section__field">
+                <label class="media-section__label" for="contactName"
+                  >Ім'я та прізвище</label
+                >
+                <input
+                  class="media-section__input"
+                  id="contactName"
+                  name="name"
+                  type="text"
+                  placeholder="Як до вас звертатися"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <div class="media-section__field">
+                <label class="media-section__label" for="contactEmail"
+                  >Електронна пошта</label
+                >
+                <input
+                  class="media-section__input"
+                  id="contactEmail"
+                  name="email"
+                  type="email"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+              <div class="media-section__field">
+                <label class="media-section__label" for="contactMessage"
+                  >Опишіть проблему</label
+                >
+                <textarea
+                  class="media-section__input media-section__textarea"
+                  id="contactMessage"
+                  name="message"
+                  rows="4"
+                  placeholder="Опишіть, що сталося"
+                  required
+                ></textarea>
+              </div>
+              <button class="media-section__submit" type="submit">
+                <span>Надіслати</span>
+                <span class="media-section__submit-arrow" aria-hidden="true"
+                  >&rarr;</span
+                >
+              </button>
+              <p
+                class="media-section__status"
+                id="contactFormStatus"
+                role="status"
+                aria-live="polite"
+              ></p>
+            </form>
+          </div>
+          <p class="media-section__notice">
+            Наразі нові заявки на ремонт не приймаються.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="faq-section section"
+        id="FAQ_section"
+        aria-labelledby="faqTitle"
+      >
+        <div class="container">
+          <div class="faq-section__heading" data-animate="fade-up">
+            <h2 class="faq-section__title" id="faqTitle">Корисно знати</h2>
+          </div>
+          <div class="faq-section__list">
+            <details class="faq-section__item">
+              <summary class="faq-section__question">
+                <span>Як ми працюємо?</span>
+                <span class="faq-section__toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-section__answer">
+                <p>
+                  Опишіть завдання та надішліть фотографії автомобіля. Ми
+                  уточнимо деталі, узгодимо обсяг робіт і строки, а потім
+                  розпочнемо відновлення. Наразі нові заявки на ремонт тимчасово
+                  не приймаються.
+                </p>
+              </div>
+            </details>
+            <details class="faq-section__item">
+              <summary class="faq-section__question">
+                <span>Що надіслати, щоб швидше отримати відповідь?</span>
+                <span class="faq-section__toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-section__answer">
+                <p>
+                  Вкажіть марку, модель і рік випуску автомобіля, коротко
+                  опишіть проблему та додайте чіткі фотографії потрібної деталі
+                  з кількох ракурсів.
+                </p>
+              </div>
+            </details>
+            <details class="faq-section__item">
+              <summary class="faq-section__question">
+                <span>У яких містах ви працюєте?</span>
+                <span class="faq-section__toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-section__answer">
+                <p>
+                  Ми працюємо лише в Торрев'єсі. В інших містах послуги не
+                  надаємо.
+                </p>
+              </div>
+            </details>
+            <details class="faq-section__item">
+              <summary class="faq-section__question">
+                <span>Які послуги ви надаєте?</span>
+                <span class="faq-section__toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-section__answer">
+                <p>
+                  Відновлюємо салон та елементи після спрацювання подушок
+                  безпеки, перетягуємо керма, ремонтуємо стелю та оновлюємо
+                  оздоблення інтер'єру. Наразі нові заявки на ремонт тимчасово
+                  не приймаються.
+                </p>
+              </div>
+            </details>
           </div>
         </div>
       </section>
     </main>
+
     <footer class="footer">
       <div class="container">
         <div class="footer__container">
           <div class="footer__logo-big" data-animate="fade-up">
             <span class="text-brand">AIRBAG</span>HUB
           </div>
-          <nav class="footer__nav">
+          <nav class="footer__nav" aria-label="Навігація у футері">
             <ul class="footer__col">
-              <li>
-                <a class="footer__link" href="#Media_section">Соцмережі</a>
-              </li>
+              <li><a class="footer__link" href="#Media_section">Контакти</a></li>
             </ul>
             <ul class="footer__col">
-              <!-- <li>
-                <a class="footer__link" href="#Works_section">Роботи</a>
-              </li> -->
+              <li>
+                <a class="footer__link" href="#Works_section">Наші роботи</a>
+              </li>
             </ul>
           </nav>
           <ul class="footer__social">
             <li>
               <a
                 href="https://www.instagram.com/_airbaghub_?igsh=MW5pY2p5aTNnYjQ2Yw%3D%3D&utm_source=qr"
+                aria-label="Instagram"
               >
                 <svg class="footer__social-icon" width="28" height="28">
                   <use href="../images/icons.svg#icon-instagram"></use>
@@ -338,7 +430,7 @@
               </a>
             </li>
             <li>
-              <a href="https://t.me/AIRBAGHUB">
+              <a href="https://t.me/AIRBAGHUB" aria-label="Telegram">
                 <svg class="footer__social-icon" width="28" height="28">
                   <use href="../images/icons.svg#icon-telegram"></use>
                 </svg>
@@ -347,6 +439,7 @@
             <li>
               <a
                 href="https://www.tiktok.com/@airbag.srs4?_r=1&_t=ZN-97QWsPEaUEQ"
+                aria-label="TikTok"
               >
                 <svg class="footer__social-icon" width="28" height="28">
                   <use href="../images/icons.svg#icon-tiktok"></use>
@@ -354,14 +447,16 @@
               </a>
             </li>
             <li>
-              <a href="https://wa.me/34601606193">
+              <a href="https://wa.me/34601606193" aria-label="WhatsApp">
                 <svg class="footer__social-icon" width="28" height="28">
                   <use href="../images/icons.svg#icon-whatsapp"></use>
                 </svg>
               </a>
             </li>
           </ul>
-          <p class="footer__copyright">© 2026 AirbagHub. Усі права захищені.</p>
+          <p class="footer__copyright">
+            © 2026 AirbagHub. Усі права захищені.
+          </p>
         </div>
       </div>
     </footer>
@@ -411,6 +506,7 @@
     <script src="../js/header.js" defer></script>
     <script src="../js/scroll-animate.js" defer></script>
     <script src="../js/lang-switcher.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="../js/before-after.js" defer></script>
+    <script src="../js/contact-form.js" defer></script>
   </body>
 </html>
