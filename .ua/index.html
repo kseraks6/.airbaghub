@@ -21,6 +21,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="../scss/main.min.css" />
+    <link rel="stylesheet" href="../scss/stacking-cards.css" />
   </head>
   <body>
     <header class="header">
@@ -94,10 +95,16 @@
     <main>
       <section class="hero-section">
         <div class="container">
-          <h1 class="hero-section__title">
+          <h1 class="hero-section__title" data-animate="fade-up">
             <span class="text-brand">AIRBAG</span>HUB
           </h1>
-          <p class="hero-section__promo">Преміальне відновлення салону</p>
+          <p
+            class="hero-section__promo"
+            data-animate="fade-up"
+            data-delay="150"
+          >
+            Преміальне відновлення салону
+          </p>
         </div>
         <video
           class="hero-section__video"
@@ -517,6 +524,7 @@
     <script src="../js/video.js" defer></script>
     <script src="../js/mobile-menu.js" defer></script>
     <script src="../js/header.js" defer></script>
+    <script src="../js/stacking-cards.js" defer></script>
     <script src="../js/scroll-animate.js" defer></script>
     <script src="../js/lang-switcher.js" defer></script>
     <script src="../js/before-after.js" defer></script>

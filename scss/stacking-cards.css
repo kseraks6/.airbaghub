@@ -1,0 +1,56 @@
+body.stacking-enabled .stacking-intro {
+  position: relative;
+  isolation: isolate;
+}
+
+body.stacking-enabled .stacking-intro > .hero-section {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  transform: translate3d(0, 0, 0) scale(var(--stack-scale, 1));
+  transform-origin: center top;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+body.stacking-enabled .stacking-intro > .hero-section::before {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  background: #000;
+  content: "";
+  opacity: var(--stack-overlay, 0);
+  pointer-events: none;
+}
+
+body.stacking-enabled .stacking-intro > .hero-section > .container {
+  z-index: 3;
+}
+
+body.stacking-enabled .stacking-intro > section:nth-child(2) {
+  position: relative;
+  z-index: 2;
+}
+
+.works-section__slider::-webkit-slider-thumb {
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.works-section__slider::-moz-range-thumb {
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+@media (max-width: 1023px),
+  (max-height: 759px),
+  (pointer: coarse),
+  (prefers-reduced-motion: reduce) {
+  body.stacking-enabled .stacking-intro > .hero-section {
+    position: static;
+    transform: none;
+    will-change: auto;
+  }
+}
