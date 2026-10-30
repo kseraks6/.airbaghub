@@ -1,3 +1,8 @@
+html.stacking-enabled,
+body.stacking-enabled {
+  overflow-x: clip;
+}
+
 body.stacking-enabled .stacking-intro {
   position: relative;
   isolation: isolate;
@@ -21,15 +26,18 @@ body.stacking-enabled .stacking-intro > .hero-section::before {
   content: "";
   opacity: var(--stack-overlay, 0);
   pointer-events: none;
+  will-change: opacity;
 }
 
 body.stacking-enabled .stacking-intro > .hero-section > .container {
   z-index: 3;
 }
 
-body.stacking-enabled .stacking-intro > section:nth-child(2) {
+body.stacking-enabled .stacking-intro > .services-section {
   position: relative;
   z-index: 2;
+  min-height: 100vh;
+  min-height: 80svh;
 }
 
 .works-section__slider::-webkit-slider-thumb {
@@ -52,5 +60,9 @@ body.stacking-enabled .stacking-intro > section:nth-child(2) {
     position: static;
     transform: none;
     will-change: auto;
+  }
+
+  body.stacking-enabled .stacking-intro > .services-section {
+    min-height: 0;
   }
 }

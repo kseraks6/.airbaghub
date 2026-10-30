@@ -3,8 +3,10 @@
   const sections = main ? Array.from(main.children).filter(
     (child) => child.matches('section')
   ) : [];
-  const hero = sections[0];
-  const cover = sections[1];
+  const hero = sections.find((section) => section.matches('.hero-section'));
+  const cover = sections.find((section) =>
+    section.matches('.services-section')
+  );
   const desktopViewport = window.matchMedia(
     '(min-width: 1024px) and (min-height: 760px) and (pointer: fine)'
   );
@@ -15,7 +17,15 @@
   let animationFrame = 0;
   let enabled = false;
 
-  if (!hero || !hero.matches('.hero-section') || !cover || !supportsSticky) {
+  if (!hero || !cover) {
+    return;
+  }
+
+  if (hero.nextElementSibling !== cover) {
+    hero.after(cover);
+  }
+
+  if (!supportsSticky) {
     return;
   }
 
@@ -24,17 +34,14 @@
     const coverTop = cover.getBoundingClientRect().top;
     const progress = Math.max(
       0,
-      Math.min(1, 1 - coverTop / window.innerHeight)
+      Math.min(1, 1 - coverTop / Math.max(window.innerHeight, 1))
     );
-    hero.style.setProperty(
-      '--stack-scale',
-      (1 - progress * 0.05).toFixed(3)
-    );
+    hero.style.setProperty('--stack-scale', (1 - progress * 0.05).toFixed(3));
     hero.style.setProperty('--stack-overlay', (progress * 0.28).toFixed(3));
   };
 
   const requestHeroUpdate = () => {
-    if (!animationFrame) {
+    if (enabled && !animationFrame) {
       animationFrame = window.requestAnimationFrame(updateHero);
     }
   };
@@ -45,6 +52,7 @@
     }
 
     enabled = shouldEnable;
+    document.documentElement.classList.toggle('stacking-enabled', enabled);
     document.body.classList.toggle('stacking-enabled', enabled);
 
     if (enabled) {
